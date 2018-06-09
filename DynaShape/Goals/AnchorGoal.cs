@@ -18,6 +18,16 @@ namespace DynaShape.Goals
             Weights = new float[1];
         }
 
+        public override string ToString()
+        {
+            return
+                StartingPositions[0].X.ToString("00.00") + ", " +
+                StartingPositions[0].Y.ToString("00.00") + ", " +
+                StartingPositions[0].Z.ToString("00.00") + " | " +
+                Anchor.X.ToString("00.00") + ", " +
+                Anchor.Y.ToString("00.00") + ", " +
+                Anchor.Z.ToString("00.00") + " | ";
+        }
 
         public AnchorGoal(Triple nodeStartingPosition, float weight = 1000f)
             : this(nodeStartingPosition, nodeStartingPosition, weight)

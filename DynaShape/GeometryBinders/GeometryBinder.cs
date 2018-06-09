@@ -23,8 +23,8 @@ namespace DynaShape.GeometryBinders
 
         public virtual List<object> CreateGeometryObjects(List<Node> allNodes) => null;
 
-        public virtual void CreateDisplayedGeometries(DynaShapeDisplay display, List<Node> allNodes)
-        { }
+        //public virtual void CreateDisplayedGeometries(DynaShapeDisplay display, List<Node> allNodes)
+        //{ }
 
     }
 }

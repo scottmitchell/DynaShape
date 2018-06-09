@@ -36,57 +36,57 @@ namespace DynaShape.ZeroTouch
         /// <param name="enableFastDisplay"></param>
         /// <param name="enableManipulation">Enable manipulation of the nodes in the background view with mouse</param>
         /// <returns></returns>
-        [MultiReturn("nodePositions", "goalOutputs", "geometries")]
-        [CanUpdatePeriodically(true)]
-        public static Dictionary<string, object> Execute(
-           DynaShape.Solver solver,
-           List<Goal> goals,
-           [DefaultArgument("null")] List<GeometryBinder> geometryBinders,
-           [DefaultArgument("0")] int iterations,
-           [DefaultArgument("true")] bool reset,
-           [DefaultArgument("true")] bool execute,
-           [DefaultArgument("true")] bool enableMomentum,
-           [DefaultArgument("true")] bool enableFastDisplay,
-           [DefaultArgument("false")] bool enableManipulation)
-        {
+        //[MultiReturn("nodePositions", "goalOutputs", "geometries")]
+        //[CanUpdatePeriodically(true)]
+        //public static Dictionary<string, object> Execute(
+        //   DynaShape.Solver solver,
+        //   List<Goal> goals,
+        //   [DefaultArgument("null")] List<GeometryBinder> geometryBinders,
+        //   [DefaultArgument("0")] int iterations,
+        //   [DefaultArgument("true")] bool reset,
+        //   [DefaultArgument("true")] bool execute,
+        //   [DefaultArgument("true")] bool enableMomentum,
+        //   [DefaultArgument("true")] bool enableFastDisplay,
+        //   [DefaultArgument("false")] bool enableManipulation)
+        //{
 
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
+        //    Stopwatch stopwatch = new Stopwatch();
+        //    stopwatch.Start();
             
-            if (reset)
-            {
-                solver.StopBackgroundExecution();
-                solver.Clear();
-                solver.AddGoals(goals);
-                if (geometryBinders != null)
-                    solver.AddGeometryBinders(geometryBinders);
-                solver.Display.Render();
-            }
-            else
-            {
-                solver.EnableMouseInteraction = enableManipulation;
-                solver.EnableMomentum = enableMomentum;
-                solver.EnableFastDisplay = enableFastDisplay;
-                solver.IterationCount = iterations;
+        //    if (reset)
+        //    {
+        //        solver.StopBackgroundExecution();
+        //        solver.Clear();
+        //        solver.AddGoals(goals);
+        //        if (geometryBinders != null)
+        //            solver.AddGeometryBinders(geometryBinders);
+        //        solver.Display.Render();
+        //    }
+        //    else
+        //    {
+        //        solver.EnableMouseInteraction = enableManipulation;
+        //        solver.EnableMomentum = enableMomentum;
+        //        solver.EnableFastDisplay = enableFastDisplay;
+        //        solver.IterationCount = iterations;
 
-                if (execute) solver.StartBackgroundExecution();
-                else
-                {
-                    solver.StopBackgroundExecution();
-                    if (!enableFastDisplay) solver.Iterate();
-                }
-            }
+        //        if (execute) solver.StartBackgroundExecution();
+        //        else
+        //        {
+        //            solver.StopBackgroundExecution();
+        //            if (!enableFastDisplay) solver.Iterate();
+        //        }
+        //    }
 
-            return enableFastDisplay
-               ? new Dictionary<string, object> {
-                   { "nodePositions", null },
-                   { "goalOutputs", null },
-                   { "geometries", null } }
-               : new Dictionary<string, object> {
-                   { "nodePositions", solver.GetNodePositionsAsPoints() },
-                   { "goalOutputs", solver.GetGoalOutputs() },
-                   { "geometries", solver.GetGeometries() } };
-        }
+        //    return enableFastDisplay
+        //       ? new Dictionary<string, object> {
+        //           { "nodePositions", null },
+        //           { "goalOutputs", null },
+        //           { "geometries", null } }
+        //       : new Dictionary<string, object> {
+        //           { "nodePositions", solver.GetNodePositionsAsPoints() },
+        //           { "goalOutputs", solver.GetGoalOutputs() },
+        //           { "geometries", solver.GetGeometries() } };
+        //}
 
 
 

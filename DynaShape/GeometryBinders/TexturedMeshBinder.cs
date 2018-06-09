@@ -69,68 +69,68 @@ namespace DynaShape.GeometryBinders
         }
 
 
-        public override void CreateDisplayedGeometries(DynaShapeDisplay display, List<Node> allNodes)
-        {
-            //======================================================================
-            // Compute vertex normals by averaging normals of surrounding faces
-            //======================================================================
+        //public override void CreateDisplayedGeometries(DynaShapeDisplay display, List<Node> allNodes)
+        //{
+        //    //======================================================================
+        //    // Compute vertex normals by averaging normals of surrounding faces
+        //    //======================================================================
 
-            Triple[] vertexNormals = new Triple[NodeCount];
+        //    Triple[] vertexNormals = new Triple[NodeCount];
 
-            foreach (IndexGroup face in faces)
-            {
-                Triple A = allNodes[NodeIndices[face.A]].Position;
-                Triple B = allNodes[NodeIndices[face.B]].Position;
-                Triple C = allNodes[NodeIndices[face.C]].Position;
+        //    foreach (IndexGroup face in faces)
+        //    {
+        //        Triple A = allNodes[NodeIndices[face.A]].Position;
+        //        Triple B = allNodes[NodeIndices[face.B]].Position;
+        //        Triple C = allNodes[NodeIndices[face.C]].Position;
 
-                Triple n = (B - A).Cross(C - A).Normalise();
+        //        Triple n = (B - A).Cross(C - A).Normalise();
 
-                vertexNormals[face.A] += n;
-                vertexNormals[face.B] += n;
-                vertexNormals[face.C] += n;
+        //        vertexNormals[face.A] += n;
+        //        vertexNormals[face.B] += n;
+        //        vertexNormals[face.C] += n;
 
-                if (face.D == uint.MaxValue) continue;
+        //        if (face.D == uint.MaxValue) continue;
 
-                Triple D = allNodes[NodeIndices[face.D]].Position;
+        //        Triple D = allNodes[NodeIndices[face.D]].Position;
 
-                n = (C - A).Cross(D - A).Normalise();
+        //        n = (C - A).Cross(D - A).Normalise();
 
-                vertexNormals[face.A] += n;
-                vertexNormals[face.C] += n;
-                vertexNormals[face.D] += n;
-            }
+        //        vertexNormals[face.A] += n;
+        //        vertexNormals[face.C] += n;
+        //        vertexNormals[face.D] += n;
+        //    }
 
-            for (int i = 0; i < NodeCount; i++) vertexNormals[i] = vertexNormals[i].Normalise();
+        //    for (int i = 0; i < NodeCount; i++) vertexNormals[i] = vertexNormals[i].Normalise();
 
 
-            ////===============================================================
-            //// Render mesh triangles, using vertex normals computed above
-            ////===============================================================
+        //    ////===============================================================
+        //    //// Render mesh triangles, using vertex normals computed above
+        //    ////===============================================================
 
-            MeshGeometry3D meshGeometry = new MeshGeometry3D()
-            {
-                Positions = new Vector3Collection(),
-                Normals = new Vector3Collection(),
-                Indices = meshFaceIndices,
-                TextureCoordinates = textureCoordinates,
-            };
+        //    MeshGeometry3D meshGeometry = new MeshGeometry3D()
+        //    {
+        //        Positions = new Vector3Collection(),
+        //        Normals = new Vector3Collection(),
+        //        Indices = meshFaceIndices,
+        //        TextureCoordinates = textureCoordinates,
+        //    };
 
-            for (int i = 0; i < NodeCount; i++)
-            {
-                meshGeometry.Positions.Add(allNodes[NodeIndices[i]].Position.ToVector3());
-                meshGeometry.Normals.Add(vertexNormals[i].ToVector3());
-            }
+        //    for (int i = 0; i < NodeCount; i++)
+        //    {
+        //        meshGeometry.Positions.Add(allNodes[NodeIndices[i]].Position.ToVector3());
+        //        meshGeometry.Normals.Add(vertexNormals[i].ToVector3());
+        //    }
 
-            display.AddMeshModel(
-                new MeshGeometryModel3D
-                {
-                    Geometry = meshGeometry,
-                    Material = new PhongMaterial
-                    {
-                        DiffuseColor = new Color(1.0f, 1.0f, 1f, 1.0f),
-                        DiffuseMap = this.diffuseMap
-                    }
-                });
-        }
+        //    display.AddMeshModel(
+        //        new MeshGeometryModel3D
+        //        {
+        //            Geometry = meshGeometry,
+        //            Material = new PhongMaterial
+        //            {
+        //                DiffuseColor = new Color(1.0f, 1.0f, 1f, 1.0f),
+        //                DiffuseMap = this.diffuseMap
+        //            }
+        //        });
+        //}
     }
 }

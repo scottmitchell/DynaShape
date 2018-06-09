@@ -35,11 +35,11 @@ namespace DynaShape.GeometryBinders
         }
 
 
-        public override void CreateDisplayedGeometries(DynaShapeDisplay display, List<Node> allNodes)
-        {
-            List<Triple> vertices = new List<Triple>();
-            for (int i = 0; i < NodeCount; i++) vertices.Add(allNodes[NodeIndices[i]].Position);
-            display.DrawPolyline(vertices, Color, Loop);
-        }
+        //public override void CreateDisplayedGeometries(DynaShapeDisplay display, List<Node> allNodes)
+        //{
+        //    List<Triple> vertices = new List<Triple>();
+        //    for (int i = 0; i < NodeCount; i++) vertices.Add(allNodes[NodeIndices[i]].Position);
+        //    display.DrawPolyline(vertices, Color, Loop);
+        //}
     }
 }

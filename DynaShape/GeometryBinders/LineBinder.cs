@@ -32,12 +32,12 @@ namespace DynaShape.GeometryBinders
             };
         }
 
-        public override void CreateDisplayedGeometries(DynaShapeDisplay display, List<Node> allNodes)
-        {
-            display.DrawLine(
-                allNodes[NodeIndices[0]].Position,
-                allNodes[NodeIndices[1]].Position,
-                Color);
-        }
+        //public override void CreateDisplayedGeometries(DynaShapeDisplay display, List<Node> allNodes)
+        //{
+        //    display.DrawLine(
+        //        allNodes[NodeIndices[0]].Position,
+        //        allNodes[NodeIndices[1]].Position,
+        //        Color);
+        //}
     }
 }
