@@ -14,7 +14,7 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <AssemblyVersion>0.5.0.184</AssemblyVersion>
+    <AssemblyVersion>0.6.0.31</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -116,10 +116,6 @@
     <Compile Include="Goals\OnCurveGoal.cs" />
     <Compile Include="Goals\OnPlaneGoal.cs" />
     <Compile Include="Goals\DirectionalWindGoal.cs" />
-    <Compile Include="ZeroTouch\GeometryBinders.cs" />
-    <Compile Include="ZeroTouch\Goals.cs" />
-    <Compile Include="ZeroTouch\Utilities.cs" />
-    <Compile Include="ZeroTouch\Solver.cs" />
     <Compile Include="GeometryBinders\GeometryBinder.cs" />
     <Compile Include="GeometryBinders\LineBinder.cs" />
     <Compile Include="GeometryBinders\MeshBinder.cs" />
@@ -139,7 +135,6 @@
     <Compile Include="Goals\ShapeMatchingGoal.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZeroTouch\TestingUtilities.cs" />
     <Compile Include="Solver.cs" />
     <Compile Include="Triple.cs" />
     <Compile Include="Util.cs" />
@@ -147,19 +142,19 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>echo Copying files to Dynamo Core packages directory
+    <PostBuildEvent>echo COPYING: DynaShape.dll  DynamoCorePackagesDir
 Copy "$(TargetDir)\DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
 Copy "$(TargetDir)\DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
 Copy "$(TargetDir)\DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Core\2.0\packages\_DynaShape\bin"
 Copy "$(TargetDir)\DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Core\2.0\packages\_DynaShape\bin"
 
-echo Copying files to Dynamo Revit packages directory
+echo COPYING: DynaShape.dll  DynamoRevitPackagesDir
 Copy "$(TargetDir)\DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Revit\1.3\packages\_DynaShape\bin"
 Copy "$(TargetDir)\DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Revit\1.3\packages\_DynaShape\bin"
 Copy "$(TargetDir)\DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Revit\2.0\packages\_DynaShape\bin"
 Copy "$(TargetDir)\DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Revit\2.0\packages\_DynaShape\bin"
 
-echo Copying files to DynaShapeInstaller project
+echo COPYING: DynaShape.dll  DynamoInstaller
 Copy "$(TargetDir)\DynaShape.dll" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"
 Copy "$(TargetDir)\DynaShape.xml" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"
 Copy "$(SolutionDir)\ManifestFiles\pkg.json" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"</PostBuildEvent>

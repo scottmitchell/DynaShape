@@ -111,7 +111,7 @@ namespace DynaShape
             meshModels.Add(meshModel);
         }
 
-        internal void Render(bool async = false)
+        public void Render(bool async = false)
         {
             if (async)
             {

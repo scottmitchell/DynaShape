@@ -31,7 +31,7 @@ namespace DynaShape
         internal int HandleNodeIndex = -1;
         internal int NearestNodeIndex = -1;
 
-        internal DynaShapeDisplay Display;
+        public DynaShapeDisplay Display;
 
         private Task backgroundExecutionTask;
 
