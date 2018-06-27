@@ -14,7 +14,7 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <AssemblyVersion>0.6.0.31</AssemblyVersion>
+    <AssemblyVersion>0.6.0.38</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -143,20 +143,20 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>echo COPYING: DynaShape.dll  DynamoCorePackagesDir
-Copy "$(TargetDir)\DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
-Copy "$(TargetDir)\DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
-Copy "$(TargetDir)\DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Core\2.0\packages\_DynaShape\bin"
-Copy "$(TargetDir)\DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Core\2.0\packages\_DynaShape\bin"
+Copy "$(TargetDir)DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
+Copy "$(TargetDir)DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
+Copy "$(TargetDir)DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Core\2.0\packages\_DynaShape\bin"
+Copy "$(TargetDir)DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Core\2.0\packages\_DynaShape\bin"
 
 echo COPYING: DynaShape.dll  DynamoRevitPackagesDir
-Copy "$(TargetDir)\DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Revit\1.3\packages\_DynaShape\bin"
-Copy "$(TargetDir)\DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Revit\1.3\packages\_DynaShape\bin"
-Copy "$(TargetDir)\DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Revit\2.0\packages\_DynaShape\bin"
-Copy "$(TargetDir)\DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Revit\2.0\packages\_DynaShape\bin"
+Copy "$(TargetDir)DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Revit\1.3\packages\_DynaShape\bin"
+Copy "$(TargetDir)DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Revit\1.3\packages\_DynaShape\bin"
+Copy "$(TargetDir)DynaShape.dll" "%25AppData%25\Dynamo\Dynamo Revit\2.0\packages\_DynaShape\bin"
+Copy "$(TargetDir)DynaShape.xml" "%25AppData%25\Dynamo\Dynamo Revit\2.0\packages\_DynaShape\bin"
 
 echo COPYING: DynaShape.dll  DynamoInstaller
-Copy "$(TargetDir)\DynaShape.dll" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"
-Copy "$(TargetDir)\DynaShape.xml" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"
-Copy "$(SolutionDir)\ManifestFiles\pkg.json" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"</PostBuildEvent>
+Copy "$(TargetDir)DynaShape.dll" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"
+Copy "$(TargetDir)DynaShape.xml" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"
+Copy "$(SolutionDir)ManifestFiles\pkg.json" "$(SolutionDir)\..\DynaShapeInstaller_VS\DynaShapeSetup\Resources"</PostBuildEvent>
   </PropertyGroup>
 </Project>

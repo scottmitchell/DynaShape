@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.6.0.0] - 2018-03-24
+### Changed
+- Major code restructuring: separating core solver from zero touch and view extension
+
 ## [0.5.0.0] - 2018-03-24
 ### Added
 - [Experimental] Display meshes with textures
