@@ -8,10 +8,29 @@ Clone the source from GitHub and open in Visual Studio.
 #### Step 2: Deal with reference files
 After open the source in Visual Studio, you may notice that some reference dll files are missing. All of these can be found in the Dynamo Core main folder on your computer (e.g. *C:\Program Files\Dynamo\Dynamo Core\1.x*), except *MeshToolkit.dll*. To get this file you need to first install the MeshToolkit package using the Dynamo Package Manager, you can then find the *MeshToolkit.dll* typically at *%AppData%\Dynamo\Dynamo Core\1.x\packages\MeshToolkit\bin*
 
-#### Step 3: Build and package
-Build the solution. All the result dlls will automatically be placed in the the right location inside a local Dynamo package folder at *[DynaShapeVisualStudioSolutionFolder]/bin/DynaShapeLocalPackage/_DynaShape*
+#### Step 3: Build
+Build the visual studio solution to obtain the DynaShape package, which is located at *[DynaShapeVisualStudioSolutionFolder]/bin/DynaShapeLocalPackage/_DynaShape*
 
 ***Very Important:*** Notice that there is an underscore character in the *"_DynaShape"* folder name as shown above. This is to ensure that Dynamo will load the DynaShape package alphabetically AFTER the MeshToolkit package. Otherwise, DynaShape will NOT be loaded correctly.
+
+If the build was done correctly, the content of the package folder should look like this:
+
+<pre>
+_DynaShape
+├── pkg.json
+└── DynaShape_ViewExtensionDefinition.xml
+└── bin
+    ├── DynaShape.dll
+    ├── DynaShape.xml
+    ├── DynaShapeUI.dll
+    ├── DynaShapeUI.xml
+    └── DynaShapeUI_DynamoCustomization.xml
+    ├── DynaShapeZeroTouch.dll
+    ├── DynaShapeZeroTouch.xml
+    └── DynaShapeZeroTouch_DynamoCustomization.xml
+</pre>
+
+(Note: You will probably also see some *.pdb* files. These files are only for debugging and are NOT required for DynaShape to function correctly)
 
 #### Step 4: Install the package into Dynamo
 Open Dynamo and go to Main-Menu > Settings > Manage Node and Package Paths..., and add a path poiting the local package folder described in step 3.
