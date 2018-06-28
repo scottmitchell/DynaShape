@@ -19,10 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynaShapeUI", "DynaShapeUI\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ManifestFiles", "ManifestFiles", "{0EA653B4-603B-4825-815F-C4B7F2322E75}"
 	ProjectSection(SolutionItems) = preProject
-		bin\DynaShapeDynamoPackage\_DynaShape\extra\DynaShape_ViewExtensionDefinition.xml = bin\DynaShapeDynamoPackage\_DynaShape\extra\DynaShape_ViewExtensionDefinition.xml
-		bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeUI_DynamoCustomization.xml = bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeUI_DynamoCustomization.xml
-		bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch_DynamoCustomization.xml = bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch_DynamoCustomization.xml
-		bin\DynaShapeDynamoPackage\_DynaShape\pkg.json = bin\DynaShapeDynamoPackage\_DynaShape\pkg.json
+		DynaShapeDynamoPackage\_DynaShape\extra\DynaShape_ViewExtensionDefinition.xml = DynaShapeDynamoPackage\_DynaShape\extra\DynaShape_ViewExtensionDefinition.xml
+		DynaShapeDynamoPackage\_DynaShape\pkg.json = DynaShapeDynamoPackage\_DynaShape\pkg.json
 	EndProjectSection
 EndProject
 Global
