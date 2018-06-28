@@ -1,0 +1,4 @@
+<ViewExtensionDefinition>
+    <AssemblyPath>..\bin\DynaShapeUI.dll</AssemblyPath>
+    <TypeName>DynaShape.DynaShapeViewExtension</TypeName>
+</ViewExtensionDefinition>

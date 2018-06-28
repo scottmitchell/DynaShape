@@ -11,7 +11,7 @@
     <AssemblyName>DynaShapeZeroTouch</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AssemblyVersion>0.6.0.24</AssemblyVersion>
+    <AssemblyVersion>0.6.0.28</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -24,9 +24,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
+    <OutputPath>..\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch.xml</DocumentationFile>
+    <DocumentationFile>..\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
