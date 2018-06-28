@@ -104,7 +104,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DynaShapeDisplay.cs" />
     <Compile Include="FastSvd3x3.cs" />
     <Compile Include="GeometryBinders\TexturedMeshBinder.cs" />
     <Compile Include="Goals\AngleGoal.cs" />
@@ -138,7 +137,6 @@
     <Compile Include="Solver.cs" />
     <Compile Include="Triple.cs" />
     <Compile Include="Util.cs" />
-    <Compile Include="DynaShapeViewExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
