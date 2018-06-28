@@ -9,9 +9,9 @@ Clone the source from GitHub and open in Visual Studio.
 After open the source in Visual Studio, you may notice that some reference dll files are missing. All of these can be found in the Dynamo Core main folder on your computer (e.g. *C:\Program Files\Dynamo\Dynamo Core\1.x*), except *MeshToolkit.dll*. To get this file you need to first install the MeshToolkit package using the Dynamo Package Manager, you can then find the *MeshToolkit.dll* typically at *%AppData%\Dynamo\Dynamo Core\1.x\packages\MeshToolkit\bin*
 
 #### Step 3: Build
-Build the visual studio solution to obtain the DynaShape package, which is located at *[DynaShapeVisualStudioSolutionFolder]/bin/DynaShapeLocalPackage/_DynaShape*
+Build the visual studio solution to obtain the DynaShape package, which is located at */bin/DynaShapeLocalPackage/_DynaShape* (inside the Visual Studio solution folder)
 
-***Very Important:*** Notice that there is an underscore character in the *"_DynaShape"* folder name as shown above. This is to ensure that Dynamo will load the DynaShape package alphabetically AFTER the MeshToolkit package. Otherwise, DynaShape will NOT be loaded correctly.
+***Very Important:*** Notice that there is an underscore character in the *"_DynaShape"* folder's name as shown above. This is to ensure that Dynamo will load the DynaShape package alphabetically AFTER the MeshToolkit package. Otherwise, DynaShape will NOT be loaded correctly.
 
 If the build was done correctly, the content of the package folder should look like this:
 
