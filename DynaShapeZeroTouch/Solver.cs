@@ -14,12 +14,14 @@ using DynaShape.GeometryBinders;
 
 namespace DynaShape.ZeroTouch
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Solver
     {
         /// <summary>
         /// Execute the solver silently and only display the final result.
         /// </summary>
-        /// <param name="solver">The solver, which can be obtained from the Solver.Create node</param>
         /// <param name="goals">The goals/constraints that the solver will solve</param>
         /// <param name="geometryBinders">The geometry binders</param>
         /// <param name="iterations">The maximum number of iterations that will be excuted</param>

@@ -3,18 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ManifestFiles", "ManifestFiles", "{88DA94EA-CD2C-4509-AA4C-AC90E64F3C22}"
-	ProjectSection(SolutionItems) = preProject
-		ManifestFiles\DynaShape_ViewExtensionDefinition.xml = ManifestFiles\DynaShape_ViewExtensionDefinition.xml
-		ManifestFiles\DynaShapeUI_DynamoCustomization.xml = ManifestFiles\DynaShapeUI_DynamoCustomization.xml
-		ManifestFiles\DynaShapeZeroTouch_DynamoCustomization.xml = ManifestFiles\DynaShapeZeroTouch_DynamoCustomization.xml
-		ManifestFiles\pkg.json = ManifestFiles\pkg.json
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{2765222E-C2CE-4778-BF25-ABD05D98F7BC}"
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
 		LICENSE.txt = LICENSE.txt
+		PostBuildEvents.bat = PostBuildEvents.bat
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -23,6 +16,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynaShapeZeroTouch", "DynaShapeZeroTouch\DynaShapeZeroTouch.csproj", "{E62C91C9-0167-484A-9131-98A29A38F4C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynaShapeUI", "DynaShapeUI\DynaShapeUI.csproj", "{11D13544-9C3A-4897-8D04-1A33D7FAA300}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ManifestFiles", "ManifestFiles", "{0EA653B4-603B-4825-815F-C4B7F2322E75}"
+	ProjectSection(SolutionItems) = preProject
+		bin\DynaShapeDynamoPackage\_DynaShape\extra\DynaShape_ViewExtensionDefinition.xml = bin\DynaShapeDynamoPackage\_DynaShape\extra\DynaShape_ViewExtensionDefinition.xml
+		bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeUI_DynamoCustomization.xml = bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeUI_DynamoCustomization.xml
+		bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch_DynamoCustomization.xml = bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch_DynamoCustomization.xml
+		bin\DynaShapeDynamoPackage\_DynaShape\pkg.json = bin\DynaShapeDynamoPackage\_DynaShape\pkg.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

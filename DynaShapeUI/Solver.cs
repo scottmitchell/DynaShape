@@ -12,8 +12,11 @@ using DynaShape.Goals;
 using DynaShape.GeometryBinders;
 
 
-namespace DynaShape.ZeroTouch
+namespace DynaShape.UI
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Solver
     {
         /// <summary>

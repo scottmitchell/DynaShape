@@ -11,22 +11,22 @@
     <AssemblyName>DynaShapeZeroTouch</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AssemblyVersion>1.0.0.11</AssemblyVersion>
+    <AssemblyVersion>0.6.0.24</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
+    <OutputPath>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>..\bin\\DynaShapeZeroTouch.xml</DocumentationFile>
+    <DocumentationFile>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
+    <OutputPath>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>..\bin\DynaShapeZeroTouch.xml</DocumentationFile>
+    <DocumentationFile>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -105,11 +105,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>echo COPYING: DynaShape.ZeroTouch.dll  DynamoCorePackagesDir
-Copy "$(TargetDir)DynaShapeZeroTouch.dll" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
-Copy "$(TargetDir)DynaShapeZeroTouch.xml" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
-
-Copy "$(SolutionDir)ManifestFiles\DynaShapeZeroTouch_DynamoCustomization.xml" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
-Copy "$(SolutionDir)ManifestFiles\pkg.json" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape"</PostBuildEvent>
+    <PostBuildEvent>rem call "$(SolutionDir)PostBuildEvents.bat" "$(SolutionDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>

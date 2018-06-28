@@ -8,6 +8,9 @@ using Mesh = Autodesk.Dynamo.MeshToolkit.Mesh;
 
 namespace DynaShape.ZeroTouch
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Goals
     {
         //==================================================================

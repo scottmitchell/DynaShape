@@ -11,22 +11,22 @@
     <AssemblyName>DynaShapeUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AssemblyVersion>1.0.0.7</AssemblyVersion>
+    <AssemblyVersion>0.6.0.24</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\</OutputPath>
+    <OutputPath>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>..\bin\DynaShapeUI.xml</DocumentationFile>
+    <DocumentationFile>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeUI.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\bin\</OutputPath>
+    <OutputPath>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>..\bin\DynaShapeUI.xml</DocumentationFile>
+    <DocumentationFile>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeUI.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -101,10 +101,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>echo COPYING: DynaShapeUI.dll  DynamoCorePackagesDir
-Copy "$(TargetDir)DynaShapeUI.dll" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
-Copy "$(TargetDir)DynaShapeUI.xml" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"
-
-Copy "$(SolutionDir)ManifestFiles\DynaShapeUI_DynamoCustomization.xml" "%25AppData%25\Dynamo\Dynamo Core\1.3\packages\_DynaShape\bin"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -10,12 +10,15 @@ using Point = Autodesk.DesignScript.Geometry.Point;
 
 namespace DynaShape.ZeroTouch
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [IsVisibleInDynamoLibrary(false)]
     public class TextureCoordinateSet
     {
-        public Vector2Collection Content;
+        internal Vector2Collection Content;
 
-        public TextureCoordinateSet(Vector2Collection content)
+        internal TextureCoordinateSet(Vector2Collection content)
         {
             Content = content;
         }

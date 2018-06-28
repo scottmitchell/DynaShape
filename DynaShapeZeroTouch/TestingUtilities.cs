@@ -16,6 +16,9 @@ using Point = Autodesk.DesignScript.Geometry.Point;
 
 namespace DynaShape.ZeroTouch
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class TestingUtilities
     {
         /// <summary>
@@ -24,6 +27,7 @@ namespace DynaShape.ZeroTouch
         /// <param name="X">Number of nodes along the X axis, minimum is 2</param>
         /// <param name="Y">Number of nodes along the Y axis, minimum is 2</param>
         /// <param name="Z">Number of nodes along the Z axis, minimum is 2</param>
+        /// <param name="allowScaling"></param>
         /// <returns>The ShapeMatching goals, Anchor goals, and polyline binders</returns>
         [MultiReturn("goals", "geometryBinders", "anchorGoals", "points")]
         public static Dictionary<string, object> WonkyCubes(int X = 21, int Y = 21, int Z = 21, bool allowScaling = false)
@@ -154,6 +158,13 @@ namespace DynaShape.ZeroTouch
             };
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="xCount"></param>
+        /// <param name="yCount"></param>
+        /// <param name="thickness"></param>
+        /// <returns></returns>
         [MultiReturn("shapeMatchingGoals", "lengthGoals", "meshBinders", "lineBinders")]
         public static Dictionary<string, object> AuxeticRotatingSquares(int xCount = 5, int yCount = 5, double thickness = 0.0)
         {
@@ -310,6 +321,13 @@ namespace DynaShape.ZeroTouch
         //}
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="xCount"></param>
+        /// <param name="yCount"></param>
+        /// <param name="thickness"></param>
+        /// <returns></returns>
         [MultiReturn("shapeMatchingGoals", "lengthGoals", "meshBinders", "lineBinders")]
         public static Dictionary<string, object> AuxeticRotatingTriangles(int xCount = 5, int yCount = 5, double thickness = 0.0)
         {

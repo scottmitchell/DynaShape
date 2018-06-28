@@ -1,4 +1,0 @@
-<ViewExtensionDefinition>
-   <AssemblyPath>[DynamoCoreAppData]\packages\DynaShape\bin\DynaShape.dll</AssemblyPath>
-  <TypeName>DynaShape.DynaShapeViewExtension</TypeName>
-</ViewExtensionDefinition>
