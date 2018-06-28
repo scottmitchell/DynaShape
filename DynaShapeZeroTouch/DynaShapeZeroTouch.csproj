@@ -11,22 +11,22 @@
     <AssemblyName>DynaShapeZeroTouch</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AssemblyVersion>0.6.0.30</AssemblyVersion>
+    <AssemblyVersion>0.6.0.33</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
+    <OutputPath>..\bin\_DynaShape\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch.xml</DocumentationFile>
+    <DocumentationFile>..\bin\_DynaShape\bin\DynaShapeZeroTouch.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
+    <OutputPath>..\bin\_DynaShape\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>..\DynaShapeDynamoPackage\_DynaShape\bin\DynaShapeZeroTouch.xml</DocumentationFile>
+    <DocumentationFile>..\bin\_DynaShape\bin\DynaShapeZeroTouch.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>

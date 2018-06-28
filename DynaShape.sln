@@ -18,10 +18,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynaShapeUI", "DynaShapeUI\DynaShapeUI.csproj", "{11D13544-9C3A-4897-8D04-1A33D7FAA300}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ManifestFiles", "ManifestFiles", "{0EA653B4-603B-4825-815F-C4B7F2322E75}"
-	ProjectSection(SolutionItems) = preProject
-		DynaShapeDynamoPackage\_DynaShape\extra\DynaShape_ViewExtensionDefinition.xml = DynaShapeDynamoPackage\_DynaShape\extra\DynaShape_ViewExtensionDefinition.xml
-		DynaShapeDynamoPackage\_DynaShape\pkg.json = DynaShapeDynamoPackage\_DynaShape\pkg.json
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

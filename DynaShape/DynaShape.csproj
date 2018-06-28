@@ -14,30 +14,30 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <AssemblyVersion>0.6.0.30</AssemblyVersion>
+    <AssemblyVersion>0.6.0.33</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
+    <OutputPath>..\bin\_DynaShape\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>..\bin\DynaShapeDynamoPackage\_DynaShape\bin\DynaShape.xml</DocumentationFile>
+    <DocumentationFile>..\bin\_DynaShape\bin\DynaShape.xml</DocumentationFile>
     <WarningsAsErrors>
     </WarningsAsErrors>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>..\DynaShapeDynamoPackage\_DynaShape\bin\</OutputPath>
+    <OutputPath>..\bin\_DynaShape\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <DocumentationFile>..\DynaShapeDynamoPackage\_DynaShape\bin\DynaShape.xml</DocumentationFile>
+    <DocumentationFile>..\bin\_DynaShape\bin\DynaShape.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UnitTest|x64'">
